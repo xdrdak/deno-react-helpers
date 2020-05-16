@@ -1,4 +1,4 @@
-import { ServerStyleSheet } from './deps.ts';
+import { ServerStyleSheet } from "./deps.ts";
 
 const sheet = new ServerStyleSheet();
 

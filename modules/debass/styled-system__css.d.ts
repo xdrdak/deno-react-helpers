@@ -6,7 +6,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.1
 
-import * as CSS from 'https://denopkg.com/frenic/csstype/index.d.ts'
+import * as CSS from "https://denopkg.com/frenic/csstype/index.d.ts";
 
 type StandardCSSProperties = CSS.PropertiesFallback<number | string>;
 
@@ -29,7 +29,10 @@ export type ResponsiveStyleValue<T> = T | Array<T | null>;
  * All non-vendor-prefixed CSS properties. (Allow `number` to support CSS-in-JS libs,
  * since they are converted to pixels)
  */
-export interface CSSProperties extends CSS.StandardProperties<number | string>, CSS.SvgProperties<number | string> { }
+export interface CSSProperties
+  extends
+    CSS.StandardProperties<number | string>,
+    CSS.SvgProperties<number | string> {}
 
 /**
  * Map of all CSS pseudo selectors (`:hover`, `:focus`, ...)
@@ -40,7 +43,11 @@ export type CSSPseudoSelectorProps = { [K in CSS.Pseudos]?: SystemStyleObject };
  * CSS as POJO that is compatible with CSS-in-JS libaries.
  * Copied directly from [emotion](https://github.com/emotion-js/emotion/blob/ca3ad1c1dcabf78a95b55cc2dc94cad1998a3196/packages/serialize/types/index.d.ts#L45) types
  */
-export interface CSSObject extends CSSPropertiesWithMultiValues, CSSPseudosForCSSObject, CSSOthersObjectForCSSObject { }
+export interface CSSObject
+  extends
+    CSSPropertiesWithMultiValues,
+    CSSPseudosForCSSObject,
+    CSSOthersObjectForCSSObject {}
 
 type CSSPropertiesWithMultiValues = {
   [K in keyof CSSProperties]: CSSProperties[K];
@@ -70,7 +77,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/background-color
    */
-  bg?: StandardCSSProperties['backgroundColor'];
+  bg?: StandardCSSProperties["backgroundColor"];
   /**
    * The **`margin`** CSS property sets the margin area on all four sides of an element. It is a shorthand for `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`.
    *
@@ -80,7 +87,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/margin
    */
-  m?: StandardCSSProperties['margin'];
+  m?: StandardCSSProperties["margin"];
   /**
    * The **`margin-top`** CSS property sets the margin area on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
    *
@@ -92,7 +99,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
    */
-  mt?: StandardCSSProperties['marginTop'];
+  mt?: StandardCSSProperties["marginTop"];
   /**
    * The **`margin-right`** CSS property sets the margin area on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
    *
@@ -104,7 +111,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
    */
-  mr?: StandardCSSProperties['marginRight'];
+  mr?: StandardCSSProperties["marginRight"];
   /**
    * The **`margin-bottom`** CSS property sets the margin area on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
    *
@@ -116,7 +123,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
    */
-  mb?: StandardCSSProperties['marginBottom'];
+  mb?: StandardCSSProperties["marginBottom"];
   /**
    * The **`margin-left`** CSS property sets the margin area on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
    *
@@ -128,7 +135,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
    */
-  ml?: StandardCSSProperties['marginLeft'];
+  ml?: StandardCSSProperties["marginLeft"];
   /**
    * The **`mx`** is shorthand for using both **`margin-left`** and **`margin-right`** CSS properties. They set the margin area on the left and right side of an element. A positive value placesit
    * farther from its neighbors, while a negative value places it closer.
@@ -143,7 +150,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
    */
-  mx?: StandardCSSProperties['marginLeft'];
+  mx?: StandardCSSProperties["marginLeft"];
   /**
    * The **`marginX`** is shorthand for using both **`margin-left`** and **`margin-right`** CSS properties. They set the margin area on the left and right side of an element. A positive value
    * places it farther from its neighbors, while a negative value places it closer.
@@ -158,7 +165,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
    */
-  marginX?: StandardCSSProperties['marginLeft'];
+  marginX?: StandardCSSProperties["marginLeft"];
   /**
    * The **`my`** is shorthard for using both **`margin-top`** and **`margin-bottom`** CSS properties. They set the margin area on the top and bottom of an element. A positive value places it
    * farther from its neighbors, while a negative value places it closer.
@@ -173,7 +180,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
    */
-  my?: StandardCSSProperties['marginTop'];
+  my?: StandardCSSProperties["marginTop"];
   /**
    * The **`marginY`** is shorthard for using both **`margin-top`** and **`margin-bottom`** CSS properties. They set the margin area on the top and bottom of an element. A positive value places
    * it farther from its neighbors, while a negative value places it closer.
@@ -188,7 +195,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
    * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
    */
-  marginY?: StandardCSSProperties['marginTop'];
+  marginY?: StandardCSSProperties["marginTop"];
   /**
    * The **`padding`** CSS property sets the padding area on all four sides of an element. It is a shorthand for `padding-top`, `padding-right`, `padding-bottom`, and `padding-left`.
    *
@@ -198,7 +205,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/padding
    */
-  p?: StandardCSSProperties['padding'];
+  p?: StandardCSSProperties["padding"];
   /**
    * The **`padding-top`** padding area on the top of an element.
    *
@@ -210,7 +217,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
    */
-  pt?: StandardCSSProperties['paddingTop'];
+  pt?: StandardCSSProperties["paddingTop"];
   /**
    * The **`padding-right`** CSS property sets the width of the padding area on the right side of an element.
    *
@@ -222,7 +229,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
    */
-  pr?: StandardCSSProperties['paddingRight'];
+  pr?: StandardCSSProperties["paddingRight"];
   /**
    * The **`padding-bottom`** CSS property sets the height of the padding area on the bottom of an element.
    *
@@ -234,7 +241,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
    */
-  pb?: StandardCSSProperties['paddingBottom'];
+  pb?: StandardCSSProperties["paddingBottom"];
   /**
    * The **`padding-left`** CSS property sets the width of the padding area on the left side of an element.
    *
@@ -246,7 +253,7 @@ interface AliasesCSSProperties {
    *
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
    */
-  pl?: StandardCSSProperties['paddingLeft'];
+  pl?: StandardCSSProperties["paddingLeft"];
   /**
    * The **`px`** is shorthand property for CSS properties **`padding-left`** and **`padding-right`**. They set the width of the padding area on the left and right side of an element.
    *
@@ -260,7 +267,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
    */
-  px?: StandardCSSProperties['paddingLeft'];
+  px?: StandardCSSProperties["paddingLeft"];
   /**
    * The **`paddingX`** is shorthand property for CSS properties **`padding-left`** and **`padding-right`**. They set the width of the padding area on the left and right side of an element.
    *
@@ -274,7 +281,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
    */
-  paddingX?: StandardCSSProperties['paddingLeft'];
+  paddingX?: StandardCSSProperties["paddingLeft"];
   /**
    * The **`py`** is shorthand property for CSS properties **`padding-top`** and **`padding-bottom`**. They set the width of the padding area on the top and bottom of an element.
    *
@@ -288,7 +295,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
    */
-  py?: StandardCSSProperties['paddingTop'];
+  py?: StandardCSSProperties["paddingTop"];
   /**
    * The **`paddingY`** is shorthand property for CSS properties **`padding-top`** and **`padding-bottom`**. They set the width of the padding area on the top and bottom of an element.
    *
@@ -302,7 +309,7 @@ interface AliasesCSSProperties {
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
    * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
    */
-  paddingY?: StandardCSSProperties['paddingTop'];
+  paddingY?: StandardCSSProperties["paddingTop"];
 }
 
 interface OverwriteCSSProperties {
@@ -353,15 +360,16 @@ interface OverwriteCSSProperties {
  * theme function or nested) in `SystemCssProperties`.
  */
 interface AllSystemCSSProperties
-  extends Omit<CSSProperties, 'boxShadow' | 'fontWeight' | 'zIndex'>,
-  AliasesCSSProperties,
-  OverwriteCSSProperties { }
+  extends
+    Omit<CSSProperties, "boxShadow" | "fontWeight" | "zIndex">,
+    AliasesCSSProperties,
+    OverwriteCSSProperties {}
 
 export type SystemCssProperties = {
   [K in keyof AllSystemCSSProperties]:
-  | ResponsiveStyleValue<AllSystemCSSProperties[K]>
-  | ((theme: any) => ResponsiveStyleValue<AllSystemCSSProperties[K]>)
-  | SystemStyleObject;
+    | ResponsiveStyleValue<AllSystemCSSProperties[K]>
+    | ((theme: any) => ResponsiveStyleValue<AllSystemCSSProperties[K]>)
+    | SystemStyleObject;
 };
 
 export interface VariantProperty {
@@ -582,13 +590,19 @@ export interface ScaleThemeProperties {
  * If you're using variants in your theme, you can access them by using the `variant`
  * property. The value of the property has to correspond to a path of your `Theme`.
  */
-export function css(input?: SystemStyleObject): (props?: Theme | { theme: Theme }) => CSSObject;
+export function css(
+  input?: SystemStyleObject,
+): (props?: Theme | { theme: Theme }) => CSSObject;
 export default css;
 
 /**
  * Safe getter with fallback. Basically https://github.com/developit/dlv
  */
-export function get(object: object, key: string | string[], defaultValue?: any): any;
+export function get(
+  object: object,
+  key: string | string[],
+  defaultValue?: any,
+): any;
 
 /**
  * Get responsive array from styles and theme.

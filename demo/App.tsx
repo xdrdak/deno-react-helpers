@@ -1,6 +1,6 @@
-import { React } from './deps.ts';
-import { Box } from '../modules/debass/mod.ts';
+import { React } from "./deps.ts";
+import { Box } from "../modules/debass/mod.ts";
 
-const App = () => <Box sx={{ background: 'red' }}>allo</Box>;
+const App = () => <Box sx={{ background: "red" }}>allo</Box>;
 
 export { App };
